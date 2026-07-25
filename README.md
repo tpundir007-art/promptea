@@ -60,7 +60,6 @@ Frontend (React)
 - LangGraph
 - LangChain
 - Groq API
-- Pydantic
 
 ---
 
