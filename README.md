@@ -155,15 +155,15 @@ http://localhost:5173
 ## 📸 Screenshots
 
 ### Home Page
-![Home](...src/screenshots/home.png)
+![Home](frontend/src/screenshots/home.png)
 
 ### Brew Page
-![Brew](...src/screenshots/brew1.png)
-![Brew](...src/screenshots/brew2.png)
-![Brew](...src/screenshots/brew3.png)
+![Brew](frontend/src/screenshots/brew1.png)
+![Brew](frontend/src/screenshots/brew2.png)
+![Brew](frontend/src/screenshots/brew3.png)
 
 ### History
-![History](...src/screenshots/history.png)
+![History](frontend/src/screenshots/history.png)
 ---
 
 ## 👥 Team
