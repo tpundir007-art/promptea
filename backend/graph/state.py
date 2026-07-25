@@ -10,7 +10,7 @@ class PromptState(TypedDict):
     strategy: dict[str, Any]
 
     draft_prompt: str
-
+    level: str
     critique: dict[str, Any]
 
     refined_prompt: str

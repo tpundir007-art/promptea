@@ -6,6 +6,7 @@ import ReactMarkdown from "react-markdown";
 
 function Brew() {
   const [prompt, setPrompt] = useState("");
+  const [level, setLevel] = useState("Novice");
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState(null);
 
@@ -26,7 +27,10 @@ function Brew() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({
+             prompt,
+            level,
+            }),
       });
 
       const data = await res.json();
@@ -67,6 +71,19 @@ function Brew() {
         Brew Your Prompt
       </h1>
 
+      <div className="level-selector">
+      <label>🌱 Brewing Level</label>
+
+      <select
+      value={level}
+      onChange={(e) => setLevel(e.target.value)}
+      >
+      <option>Novice</option>
+      <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Advanced</option>
+      </select>
+    </div>
       <textarea
         className="prompt-box"
         placeholder="Type your prompt here..."

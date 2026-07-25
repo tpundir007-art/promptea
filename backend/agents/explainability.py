@@ -8,6 +8,9 @@ def explainability_agent(state):
     """
 
     user_message = f"""
+User Level:
+{state["level"]}
+
 Original Prompt:
 {state["user_prompt"]}
 

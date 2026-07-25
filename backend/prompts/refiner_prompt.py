@@ -53,6 +53,24 @@ STRICT RULES
 - Produce only the rewritten prompt.
 - Do not include markdown.
 - Do not include explanations.
+Never invent or assume facts about the user.
+
+Only use information explicitly provided in the original prompt.
+
+If important information is missing, either:
+- leave it as a generic placeholder, OR
+- phrase it in a neutral way without making assumptions.
+
+Do NOT fabricate:
+- experience level
+- profession
+- age
+- interests
+- tools
+- education
+- goals
+- location
+- preferences
 
 --------------------------------------------------
 OUTPUT

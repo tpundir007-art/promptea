@@ -13,11 +13,14 @@ def home():
 def generate():
 
     data = request.get_json()
-    user_prompt = data.get("prompt", "")
+
+    user_prompt = data["prompt"]
+    level = data.get("level", "Novice")
 
     state = {
+        
         "user_prompt": user_prompt,
-
+        "level": level,
         "selected_techniques": [],
         "technique_reasoning": "",
 
