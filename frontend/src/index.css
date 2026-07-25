@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Promptea — global tokens
+   Palette: peach background with meadow green as the primary brand color,
+   golden pollen / leaflit green as supporting accents, and the playful
+   pink/blue accents used sparingly for cute or informal moments.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Monoton";
+  src: url("./font/Monoton.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("./font/Nunito.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Color — peach & meadow palette */
+  --color-bg: #f1d2a1;         /* page background — peach */
+  --color-primary: #0c6038;    /* meadow green — primary brand color */
+  --color-accent: #5d7b3d;     /* leaflit — secondary green accent */
+  --color-secondary: #f6c94d;  /* golden pollen — highlights, active states */
+  --color-cute: #e45688;       /* sunset petal — playful accent, used sparingly */
+  --color-soft: #f29bb9;       /* rosebud blush — soft accent */
+  --color-cool: #a7c7e4;       /* evening sky — cool accent */
+  --color-text: #2d4c39;       /* outerspace — primary text */
+  --color-text-muted: #4d6857; /* text at lower emphasis, derived from outerspace */
+  --color-surface: #f8e2bd;    /* card/panel surface, lighter than bg */
+  --color-error: #c9573f;
+
+  /* Type */
+  --font-display: "Monoton", cursive;
+  --font-body: "Nunito", sans-serif;
+
+  --fs-hero: clamp(2.5rem, 5vw, 4.5rem);
+  --fs-h1: clamp(1.75rem, 3vw, 2.5rem);
+  --fs-h2: 1.5rem;
+  --fs-body: 1rem;
+  --fs-caption: 0.8125rem;
+
+  /* Layout */
+  --content-max: 1180px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+
+  --shadow-soft: 0 12px 32px rgba(45, 76, 57, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: var(--color-primary);
+}
+
+h1 { font-size: var(--fs-hero); }
+h2 { font-size: var(--fs-h1); }
+h3 { font-size: var(--fs-h2); }
+
+p {
+  color: var(--color-text-muted);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-cute);
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Visible keyboard focus everywhere — non-negotiable */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Shared "steeping" motif — a slow rise + fade, for steam/loading accents.
+   Anyone building Workflow/SkillModal can reuse this instead of inventing
+   a new motion language. */
+@keyframes steam-rise {
+  0% { transform: translateY(0) scale(1); opacity: 0.6; }
+  100% { transform: translateY(-14px) scale(1.15); opacity: 0; }
+}
+
+/* Small utility classes so components can pull accent colors without
+   re-declaring hex values. Extend as needed. */
+.text-primary { color: var(--color-primary); }
+.text-accent { color: var(--color-accent); }
+.bg-surface { background-color: var(--color-surface); }
+.shadow-soft { box-shadow: var(--shadow-soft); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

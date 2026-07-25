@@ -1,0 +1,99 @@
+.history-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+.history-page h1 {
+  font-family: "Monoton", cursive;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #0C6038;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.history-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 6px 16px rgba(93, 123, 61, 0.1);
+  transition: 0.25s;
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(93, 123, 61, 0.18);
+}
+
+.history-prompt {
+  font-style: italic;
+  color: #2D4C39;
+  margin-bottom: 0.6rem;
+  font-size: 1.05rem;
+}
+
+.history-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #6b6b5f;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.empty-icon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.empty-state p {
+  color: #6b6b5f;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.empty-btn {
+  padding: 0.8rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 30px;
+  background: #E45688;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(228, 86, 136, 0.3);
+  transition: 0.3s;
+}
+
+.empty-btn:hover {
+  background: #d13f74;
+  transform: translateY(-2px);
+}
+
+.history-group {
+  margin-bottom: 1.8rem;
+}
+
+.group-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #6b6b5f;
+  letter-spacing: 1px;
+  margin-bottom: 0.6rem;
+}
