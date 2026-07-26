@@ -133,7 +133,7 @@ npm run dev
 
 
 🌐 Live Demo:
-https://your-netlify-url.netlify.app
+https://prompteagit.netlify.app/
 
 ⚙️ Backend API:
 https://promptea.onrender.com
