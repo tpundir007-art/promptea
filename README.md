@@ -131,11 +131,15 @@ npm install
 npm run dev
 ```
 
-Frontend runs at:
 
-```
-http://localhost:5173
-```
+🌐 Live Demo:
+https://your-netlify-url.netlify.app
+
+⚙️ Backend API:
+https://promptea.onrender.com
+
+📂 GitHub:
+https://github.com/tpundir007-art/promptea
 
 ---
 
